@@ -1,10 +1,8 @@
-package br.com.abc.javacore.Wio.test;
+package Wio.test;
 
 import java.io.Console;
 
-/**
- * Created by William Suane on 8/2/2016.
- */
+
 public class ConsoleTest {
     public static void main(String[] args) {
         Console c = System.console();
@@ -24,3 +22,4 @@ public class ConsoleTest {
         return arg1;
     }
 }
+ 

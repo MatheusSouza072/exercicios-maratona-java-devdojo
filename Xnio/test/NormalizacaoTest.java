@@ -15,3 +15,4 @@ public class NormalizacaoTest {
         System.out.println(p2.normalize());
     }
 }
+ 

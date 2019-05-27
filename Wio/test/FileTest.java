@@ -1,12 +1,9 @@
-package br.com.abc.javacore.Wio.test;
+package Wio.test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-/**
- * Created by William Suane on 8/1/2016.
- */
 public class FileTest {
     public static void main(String[] args) {
         File file = new File("Arquivo.txt");

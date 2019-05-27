@@ -1,10 +1,7 @@
-package br.com.abc.javacore.Wio.test;
+package Wio.test;
 
 import java.io.*;
 
-/**
- * Created by William Suane on 8/17/2016.
- */
 public class StreamsTest {
     public static void main(String[] args) {
         leitorTunado();
@@ -26,7 +23,7 @@ public class StreamsTest {
         try (BufferedOutputStream gravadorBuffer = new BufferedOutputStream (new FileOutputStream("pasta/stream.txt"),4098)) {
             gravadorBuffer.write(dados);
             gravadorBuffer.flush();
-            System.out.println("Dados gravados com sucesso!");
+            System.out.println("Dados gravados com sucesso");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -31,12 +31,12 @@ public class PathMatcherTest {
         matches(path1,"glob:**");
         System.out.println("-------------------");
         matches(path1,"glob:*.???");
-        matches(path1,"glob:**/*.???");
+        matches(path1,"glob:**/*.???"); 
         matches(path1,"glob:**.???");
         System.out.println("-------------------");
-        matches(path3,"glob:{william*,suane*}");
-        matches(path3,"glob:{william,suane}*");
-        matches(path3,"glob:{william,suane}");
+        matches(path3,"glob:{matheus*,suane*}");
+        matches(path3,"glob:{matheus,suane}*");
+        matches(path3,"glob:{matheus,suane}");
         Files.walkFileTree(Paths.get("./"), new FindAllTest());
     }
 

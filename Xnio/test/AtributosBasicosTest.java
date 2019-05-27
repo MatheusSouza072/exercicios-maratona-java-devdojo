@@ -39,18 +39,14 @@ public class AtributosBasicosTest {
         System.out.println("lastAccess "+ atributosBasicos.lastAccessTime());
         System.out.println("LastModified "+ atributosBasicos.lastModifiedTime());
         System.out.println("-------------------------------");
-//        System.out.println(atributosBasicos.isDirectory());
-//        System.out.println(atributosBasicos.isSymbolicLink());
-//        System.out.println(atributosBasicos.isRegularFile());
 
-        // BasicFileAttributeView, PosixFileAttributeView, DosFileAttributeView, FileOwnerAttributeView, AclFileAttributeView
         FileTime lastModified = atributosBasicos.lastModifiedTime();
         FileTime created = atributosBasicos.creationTime();
         FileTime lastAcess = FileTime.fromMillis(System.currentTimeMillis());
         BasicFileAttributeView basicView = Files.getFileAttributeView(path, BasicFileAttributeView.class);
         basicView.setTimes(lastModified,lastAcess,created);
         atributosBasicos = Files.readAttributes(path, BasicFileAttributes.class);
-        System.out.println("create "+ atributosBasicos.creationTime());
+        System.out.println("create "+ atributosBasicos.creationTime()); 
         System.out.println("lastAccess "+ atributosBasicos.lastAccessTime());
         System.out.println("LastModified "+ atributosBasicos.lastModifiedTime());
 
