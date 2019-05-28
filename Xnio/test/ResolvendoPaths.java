@@ -23,3 +23,4 @@ public class ResolvendoPaths {
         System.out.println("6: "+file.resolve(relativo));
     }
 }
+ 

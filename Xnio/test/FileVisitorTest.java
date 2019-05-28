@@ -23,7 +23,7 @@ public class FileVisitorTest {
 }
 
 
-class PrintDirs extends SimpleFileVisitor<Path> {
+class PrintDirs extends SimpleFileVisitor<Path> { 
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
         System.out.println("pre: " + dir);
 //        if(dir.getFileName().toString().equals("subsubpasta")){

@@ -17,19 +17,19 @@ import java.util.GregorianCalendar;
 public class AtributosBasicosTest {
     public static void main(String[] args) throws IOException {
         Date primeiroDeDezemebro = new GregorianCalendar(2015, Calendar.DECEMBER, 1).getTime();
-        File file = new File("folder2\\arquivo.txt");
+        File file = new File("folder2/arquivo.txt");
         file.createNewFile();
         file.setLastModified(primeiroDeDezemebro.getTime());
         System.out.println(file.lastModified());
         file.delete();
-        Path path = Paths.get("folder2\\arquivo_path.txt");
+        Path path = Paths.get("folder2/arquivo_path.txt");
         Files.createFile(path);
         FileTime fileTime = FileTime.fromMillis(primeiroDeDezemebro.getTime());
         Files.setLastModifiedTime(path, fileTime);
-        System.out.println(Files.getLastModifiedTime(path));
+        System.out.println(Files.getLastModifiedTime(path)); 
         Files.deleteIfExists(path);
 
-        path = Paths.get("src\\br\\com\\abc\\javacore\\Aintroducaoclasses\\classes\\Carro.java");
+        path = Paths.get("src/Aintroducaoclasses/classes/Carro.java");
         System.out.println(Files.isReadable(path));
         System.out.println(Files.isWritable(path));
         System.out.println(Files.isExecutable(path));
@@ -48,7 +48,7 @@ public class AtributosBasicosTest {
         atributosBasicos = Files.readAttributes(path, BasicFileAttributes.class);
         System.out.println("create "+ atributosBasicos.creationTime()); 
         System.out.println("lastAccess "+ atributosBasicos.lastAccessTime());
-        System.out.println("LastModified "+ atributosBasicos.lastModifiedTime());
+        System.out.println("LastModified "+ atributosBasicos.lastModifiedTime()); 
 
 
     }

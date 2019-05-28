@@ -27,7 +27,7 @@ public class PathMatcherTest {
         System.out.println("-------------------");
         matches(path1,"glob:*.bkp");
         matches(path1,"glob:**/*.bkp");
-        matches(path1,"glob:*");
+        matches(path1,"glob:*"); 
         matches(path1,"glob:**");
         System.out.println("-------------------");
         matches(path1,"glob:*.???");

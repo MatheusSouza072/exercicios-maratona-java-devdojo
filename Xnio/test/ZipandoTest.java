@@ -32,7 +32,7 @@ public class ZipandoTest {
                 }
                 zip.flush();
                 zip.closeEntry();
-                bf.close();
+                bf.close(); 
             }
         } catch (IOException e) {
             e.printStackTrace();

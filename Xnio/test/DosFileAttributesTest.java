@@ -28,6 +28,6 @@ public class DosFileAttributesTest {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        } 
     }
 }
